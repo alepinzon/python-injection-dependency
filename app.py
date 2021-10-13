@@ -1,7 +1,7 @@
 
 from blueprint import Blueprint
 from container import Container
-from constructs import log_group, ecs
+import constructs
 
 class App():
 
@@ -10,6 +10,6 @@ class App():
        
 if __name__ == '__main__':
     container = Container()
-    container.wire(modules=[ecs, log_group])
+    container.wire(packages=[constructs])
 
     App()
